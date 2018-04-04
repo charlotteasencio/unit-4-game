@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lan="eng">
+<head>
+    <meta charset="utf-8" />
+    <title>Unit-4-Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-xs-12">
+<h1>Crystals Collector</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to the computer generated random number. You lose the game is your total score goes above the computer generated random number.</p>
+        <p>The value of each cyrstal is hidden from you until you click on it.</p>
+        <p>Every time the game restarts, the value of each crystal will change.</p>    
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6" id="computerNumber">
+        <p>Crystal collected value to match:</p>
+        <image src="assets/images/circle.png" alt="circle"></image>
+    </div>
+    <div class="col-xs-6" id="userNumber">
+        <p>Your crystals collected value:</p>
+        <image src="assets/images/bucket.png" alt="bucket"></image>
+    </div>
+</div>
+
+<div class="row" id="crystals">
+    <div class="col-xs-3"><image src="assets/images/pinkcrystal.png" alt="pink crystal"></image></div>
+    <div class="col-xs-3"><image src="assets/images/greencrystal.png" alt="green crystal"></image></div>
+    <div class="col-xs-3"><image src="assets/images/orangecrystal.png" alt="orange crystal"></image></div>
+    <div class="col-xs-3"><image src="assets/images/bluecrystal.png" alt="blue crystal"></image></div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4">
+        <p>Wins:</p>
+        <p>Losses:</p>
+        <image src="assets/images/winsandlosses.png" alt="square"></image>
+    </div>
+    <div class="col-xs-4"></div>
+</div>
+</div>
+</body>
+</html>
