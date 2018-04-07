@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lan="eng">
+<html>
 <head>
     <meta charset="utf-8" />
     <title>Unit-4-Game</title>
@@ -13,44 +13,43 @@
 </head>
 <body>
 
-<h1>Crystals Collector</h1>
+
+
+<div id="gameTitle"><h1>Crystals Collector</h1></div>
+<div id="instructions">
         <p>You will be given a random number at the start of the game.</p>
         <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-        <p>You win the game by matching your total score to the computer generated random number. You lose the game is your total score goes above the computer generated random number.</p>
+        <p>You win the game by matching your total score to the computer generated random number. 
+            <br>You lose the game if your total score goes above the computer generated random number.</p>
         <p>The value of each cyrstal is hidden from you until you click on it.</p>
-        <p>Every time the game restarts, the value of each crystal will change.</p>    
-    </div>
+        <p>Every time the game restarts, the value of each crystal will change.</p> 
+</div>   
+
+<div id="counters">
+<div class="computerNumber">Computer Number:</div>
+<div class="crystalValue">Crystal Value:</div>
+</div>
 
 <div class=crystals>
-    <div id="computerNumber">
-        <p>Crystal collected value to match:</p>
-        <image src="assets/images/circle.png" alt="circle"></image>
-    </div>
-    <div id=crystalValues>
-        <p>Your crystals collected value:</p>
-        <image src="assets/images/bucket.png" alt="bucket"></image>
-    </div>
-    
     <div id="pinkCrystal">
-        <image src="assets/images/pinkcrystal.png" alt="pink crystal"></image>
+        <img src="assets/images/pinkcrystal.png" alt="pink crystal">
     </div>
 
     <div id="greenCrystal">
-        <image src="assets/images/greencrystal.png" alt="green crystal"></image>
+        <img src="assets/images/greencrystal.png" alt="green crystal">
     </div>
     <div id="orangeCrystal">
-        <image src="assets/images/orangecrystal.png" alt="orange crystal"></image>
+        <img src="assets/images/orangecrystal.png" alt="orange crystal">
     </div>
     <div id="blueCrystal">
-        <image src="assets/images/bluecrystal.png" alt="blue crystal"></image>
+        <img src="assets/images/bluecrystal.png" alt="blue crystal">
     </div>
 </div>
 
-    <div id="winsandlosses">
-        <p>Wins:</p>
-        <p>Losses:</p>
-        <image src="assets/images/winsandlosses.png" alt="square"></image>
-    </div>
+<div id="winsandlosses">
+    <div id="wins">Wins:</div>
+    <div id="losses">Losses:</div>
+</div>
     
 </body>
 </html>

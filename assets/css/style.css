@@ -1,0 +1,40 @@
+#gameTitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#counters{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+p{
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.crystals{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+#winsandlosses{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+
+

@@ -1,49 +1,96 @@
 //Define the variables
 $(document).ready(function () {
 
-var computerNumber;
 var crystalValue = 0; 
-var crystalA;
-var crystalB;
-var crystalC;
-var crystalD;
+var crystalA = 0;
+var crystalB = 0;
+var crystalC = 0;
+var crystalD = 0;
 var wins = 0;
 var losses = 0;
+
+function reset(){
+  crystalValue = 0; 
+  crystalA = 0;
+  crystalB = 0;
+  crystalC = 0;
+  crystalD = 0;
+  computerNumber = Math.floor(Math.random() * 101) + 19;
+  console.log(computerNumber);
+  $("div.computerNumber").html("Computer number:" + " " + computerNumber);
+  $("div.crystalValue").html("Crystal Value:" + " " + crystalValue);
+}
+
 
 //Computer generates a random number between 19 and 120
 var computerNumber = Math.floor(Math.random() * 101) + 19;
 console.log(computerNumber);
 
+$("div.computerNumber").html("Computer Number:" + " " + computerNumber);
+
 function addCrystalValue(value){
-    crystalValue += value
-    $("#crystalValues").html(crystalValue);
-    console.log(crystalValue);
+    crystalValue += value;
+    $("div.crystalValue").html("Crystal Value:" + " " + crystalValue);
+
+    if (crystalValue === computerNumber){
+      alert("Just the right amount of crystals. You win!");
+      wins++;
+      console.log(wins);
+      reset();
+      
+      $("#wins").html("Wins:" + " " + wins);
+    }
+
+    if (crystalValue > computerNumber){
+      alert("Too many crystals. You lose.");
+      losses++;
+      console.log("losses:" + losses);
+      reset();
+
+      $("#losses").html("Losses:" + " " + losses);
+
+    } 
+
 }
 
 //Crystals A-D are assigned a random number between 1 and 12 on click. This is hidden
 //When each crystal is clicked, its number is added to the crystal value and displayd there
-$("body").on("click", "#pinkCrystal", function() {
-    var crystalA = Math.floor(Math.random() * 12) + 1;
+
+  $("#pinkCrystal").click(function() {
+  if (crystalA === 0){
+    crystalA = Math.floor(Math.random() * 12) + 1;
     addCrystalValue(crystalA);
+} else {
+    addCrystalValue(crystalA);
+  }
+});
 
-  }).on("click", "#greenCrystal", function() {
-      var crystalB = Math.floor(Math.random() * 12) + 1;
-      addCrystalValue(crystalB);
+$("#greenCrystal").click(function() {
+  if (crystalB === 0){
+    crystalB = Math.floor(Math.random() * 12) + 1;
+    addCrystalValue(crystalB);
+} else {
+    addCrystalValue(crystalB);
+  }
+});
 
-  }).on("click", "#orangeCrystal", function() {
-    var crystalC = Math.floor(Math.random() * 12) + 1;
+$("#orangeCrystal").click(function() {
+  if (crystalC === 0){
+    crystalC = Math.floor(Math.random() * 12) + 1;
     addCrystalValue(crystalC);
+} else {
+    addCrystalValue(crystalC);
+  }
+});
 
-  }).on("click", "#blueCrystal", function(){
-    var crystalD = Math.floor(Math.random() * 12) + 1;
+$("#blueCrystal").click(function() {
+  if (crystalD === 0){
+    crystalD = Math.floor(Math.random() * 12) + 1;
     addCrystalValue(crystalD);
+} else {
+    addCrystalValue(crystalD);
+  }
+});
 
-  });
-
-
-
-//if user# equals computer#, wins go up by one and rest of game resets
-
-//if user# is greater than computer#, losses go up and rest of game resets
 
 });
