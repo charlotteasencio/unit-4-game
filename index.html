@@ -5,7 +5,7 @@
     <title>Unit-4-Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
@@ -13,17 +13,29 @@
 </head>
 <body>
 
-
-
+<div class="container">
 <div id="gameTitle"><h1>Coffee Drinker</h1></div>
-<div id="instructions">
+<div class="row">
+<div id="middlesection">
+    <div class="col-xs-9">
+    <div id="instructions">
         <p>You will be given a random number at the start of the game. This is the exact amount of coffee you need to make it through the day.</p>
         <p>There are four cups of coffee below. By clicking on a cup of coffee, you will add a specific amount of caffeine points to your total score.</p>
-        <p>You win the game by matching your caffeine points to the amount of coffee needed and therefore being properly caffeinated to make it through the day. 
-            <br>You lose the game if your amount of caffeine goes above the total amount needed as you will become too hyper.</p>
+        <p>You win the game by matching your caffeine points to the amount of coffee needed and therefore being properly caffeinated to make it through the day.</p> 
+        <p>You lose the game if your amount of caffeine goes above the total amount needed as you will become too hyper.</p>
         <p>The amount of caffeine in each cup of coffee is hidden from you until you click on it and it is added to the total amount of caffeine consumed.</p>
         <p>Every time the game restarts, the amount of caffeine in each cup of coffee will change.</p> 
-</div>   
+    </div> 
+    </div>
+    <div class="col-xs-3">
+    <div id="winsandlosses">
+        <div id="wins">Wins:</div>
+        <div id="losses">Losses:</div>
+    </div>
+    </div>
+</div>
+</div>
+</div>  
 
 <div id="counters">
 <div class="computerNumber">Amount of Caffeine Needed:</div>
@@ -44,11 +56,6 @@
     <div id="pinkcoffee">
         <img src="assets/images/pinkcoffee.png" alt="pink coffee">
     </div>
-</div>
-
-<div id="winsandlosses">
-    <div id="wins">Wins:</div>
-    <div id="losses">Losses:</div>
 </div>
     
 </body>
