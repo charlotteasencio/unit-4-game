@@ -1,24 +1,24 @@
 //Define the variables
 $(document).ready(function () {
 
-var crystalValue = 0; 
-var crystalA = 0;
-var crystalB = 0;
-var crystalC = 0;
-var crystalD = 0;
+var coffeeValue = 0; 
+var coffeeA = 0;
+var coffeeB = 0;
+var coffeeC = 0;
+var coffeeD = 0;
 var wins = 0;
 var losses = 0;
 
 function reset(){
-  crystalValue = 0; 
-  crystalA = 0;
-  crystalB = 0;
-  crystalC = 0;
-  crystalD = 0;
+  coffeeValue = 0; 
+  coffeeA = 0;
+  coffeeB = 0;
+  coffeeC = 0;
+  coffeeD = 0;
   computerNumber = Math.floor(Math.random() * 101) + 19;
   console.log(computerNumber);
-  $("div.computerNumber").html("Computer number:" + " " + computerNumber);
-  $("div.crystalValue").html("Crystal Value:" + " " + crystalValue);
+  $("div.computerNumber").html("Amount of Caffeine Needed:"+ " " + computerNumber);
+  $("div.coffeeValue").html("Amount of Caffeine Consumed:" + " " + coffeeValue);
 }
 
 
@@ -26,71 +26,76 @@ function reset(){
 var computerNumber = Math.floor(Math.random() * 101) + 19;
 console.log(computerNumber);
 
-$("div.computerNumber").html("Computer Number:" + " " + computerNumber);
+$("div.computerNumber").html("Amount of Caffeine Needed:" + " " + computerNumber);
 
-function addCrystalValue(value){
-    crystalValue += value;
-    $("div.crystalValue").html("Crystal Value:" + " " + crystalValue);
+function addCoffeeValue(value){
+    coffeeValue += value;
+    $("div.coffeeValue").html("Amount of Caffeine Consumed:" + " " + coffeeValue);
 
-    if (crystalValue === computerNumber){
-      alert("Just the right amount of crystals. You win!");
-      wins++;
-      console.log(wins);
+    if (coffeeValue === computerNumber){
+      setTimeout(function () {
+        alert("Just the right amount of coffee! You win!");
+    }, 100);
+      setTimeout(function(){
       reset();
+    }, 500);
+    wins++;
       
       $("#wins").html("Wins:" + " " + wins);
     }
 
-    if (crystalValue > computerNumber){
-      alert("Too many crystals. You lose.");
+    if (coffeeValue > computerNumber){
+        
+      setTimeout(function (){
+        alert("You drank too much coffee and now you are super hyper! You lose.");
+    }, 100);
+      setTimeout(function(){
+        reset();
+      }, 500);
       losses++;
-      console.log("losses:" + losses);
-      reset();
 
       $("#losses").html("Losses:" + " " + losses);
 
     } 
-
 }
 
 //Crystals A-D are assigned a random number between 1 and 12 on click. This is hidden
 //When each crystal is clicked, its number is added to the crystal value and displayd there
 
-  $("#pinkCrystal").click(function() {
-  if (crystalA === 0){
-    crystalA = Math.floor(Math.random() * 12) + 1;
-    addCrystalValue(crystalA);
+  $("#peachcoffee").click(function() {
+  if (coffeeA === 0){
+    coffeeA = Math.floor(Math.random() * 12) + 1;
+    addCoffeeValue(coffeeA);
 } else {
-    addCrystalValue(crystalA);
+    addCoffeeValue(coffeeA);
   }
 });
 
-$("#greenCrystal").click(function() {
-  if (crystalB === 0){
-    crystalB = Math.floor(Math.random() * 12) + 1;
-    addCrystalValue(crystalB);
+$("#mintcoffee").click(function() {
+  if (coffeeB === 0){
+    coffeeB = Math.floor(Math.random() * 12) + 1;
+    addCoffeeValue(coffeeB);
 } else {
-    addCrystalValue(crystalB);
+    addCoffeeValue(coffeeB);
   }
 });
 
-$("#orangeCrystal").click(function() {
-  if (crystalC === 0){
-    crystalC = Math.floor(Math.random() * 12) + 1;
-    addCrystalValue(crystalC);
+$("#yellowcoffee").click(function() {
+  if (coffeeC === 0){
+    coffeeC = Math.floor(Math.random() * 12) + 1;
+    addCoffeeValue(coffeeC);
 } else {
-    addCrystalValue(crystalC);
+    addCoffeeValue(coffeeC);
   }
 });
 
-$("#blueCrystal").click(function() {
-  if (crystalD === 0){
-    crystalD = Math.floor(Math.random() * 12) + 1;
-    addCrystalValue(crystalD);
+$("#pinkcoffee").click(function() {
+  if (coffeeD === 0){
+    coffeeD = Math.floor(Math.random() * 12) + 1;
+    addCoffeeValue(coffeeD);
 } else {
-    addCrystalValue(crystalD);
+    addCoffeeValue(coffeeD);
   }
 });
-
 
 });
