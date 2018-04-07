@@ -47,7 +47,7 @@ function addCoffeeValue(value){
     if (coffeeValue > computerNumber){
         
       setTimeout(function (){
-        alert("You drank too much coffee and now you are super hyper! You lose.");
+        alert("You drank too much coffee and you were hyper all day! You lose.");
     }, 100);
       setTimeout(function(){
         reset();
