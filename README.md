@@ -1,6 +1,6 @@
 # unit-4-game
 
-* This is a guessing game in which the player attemps to match the computer generated random number by clicking on the coffee cup images.
+* This is a guessing game in which the player attemps to match the computer generated random number by clicking on the crystal images.
 
 ## Instructions 
 
